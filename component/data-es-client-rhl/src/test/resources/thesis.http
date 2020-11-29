@@ -1,0 +1,267 @@
+### 创建论文
+POST http://{{host}}:{{port}}/thesis/manage/create
+Content-Type: application/json
+
+{
+  "timestamp": 1587114236000,
+  "tokenKey": "70ed1c56498a4735a34fe1a0104085912",
+  "data": {
+    "thesisId": 1,
+    "title": "谢进军测试8",
+    "thesisSourceId": 1,
+    "thesisSource": "导入",
+    "journalName": null,
+    "abstractInfo": "dd",
+    "endPageNo": 10,
+    "thesisReferenceNum": 10,
+    "journalId": "423567149291012249",
+    "publishedDate": "1582992000000",
+    "startPageNo": 2,
+    "submitDate": "1582646400000",
+    "volumeIssueNo": "22"
+  }
+}
+
+
+
+### 论文工具
+POST http://{{host}}:{{port}}/thesis/tool/reset
+Content-Type: application/json
+
+{
+  "head": {
+    "from": "string"
+  },
+  "timestamp": 1586532961000,
+  "tokenKey": "a320576d91e24feba479f504c85f9b702",
+  "name": "test",
+  "page": {
+    "lastId": null,
+    "lastTime": "-1",
+    "pageSize": 20
+  }
+}
+
+
+
+### 检索论文(管理端)
+POST http://{{host}}:{{port}}/thesis/manage/retrieve
+Content-Type: application/json
+
+{
+  "fileId": "1337",
+  "head": {
+    "from": "string"
+  },
+  "timestamp": 1586532961000,
+  "tokenKey": "f6a150f05bb14563849938791ce86a693",
+  "authorName": "何倩",
+  "page": {
+    "pageSize": 30
+  }
+}
+
+### 检索论文(用户端)
+POST http://{{host}}:{{port}}/thesis/usage/retrieve
+Content-Type: application/json
+
+{
+  "head": {
+    "from": "ceshi"
+  },
+  "name": "医学论文",
+  "page": {
+    "lastTime": 0,
+    "pageSize": 10
+  },
+  "timestamp": 1592581557000,
+  "tokenKey": "cdeabdaf0fd24c09afffc8d78a78fcfc37"
+}
+
+### 文档详情
+POST http://{{host}}:{{port}}/thesis/manage/detail
+Content-Type: application/json
+
+{
+  "fileId": "1337",
+  "head": {
+    "from": "string"
+  },
+  "timestamp": 1586532961000,
+  "tokenKey": "3738028fb74f4c7dabe5da6ccf25eb8a2",
+  "thesisId": 437811030370975744
+}
+
+
+### 编辑论文
+POST http://{{host}}:{{port}}/thesis/manage/edit
+Content-Type: application/json
+
+{
+  "abstractInfo": "  《中国组织工程研究》是由中华人民共和国卫生部主管，中国康复医学会 、《中国组织工程与临床康复》杂志社主办的国家级学术期刊;曾用名《中国临床康复》、《中国组织工程研究与临床康复》，创刊于1997年，周刊，规格为国际通用大16开本;国际标准刊号ISSN1673-8225，国内统一刊号CN21-1539/R，邮发代号8-584;单价13.00元，插图随文，印刷精致。\n ",
+  "endPageNo": 202,
+  "head": {
+    "from": "ceshi"
+  },
+  "journalId": "423567149291012248",
+  "publishedDate": "1586188800000",
+  "startPageNo": 20,
+  "submitDate": "1588003200000",
+  "thesisAttaches": [],
+  "thesisAuthors": [
+    {
+      "authorBreastPiece": "8888",
+      "authorId": "296793802205569024",
+      "authorName": "测试",
+      "institutionId": "296930450885058560",
+      "institutionName": "测试12111",
+      "networkName": "sunshin1",
+      "role": 1,
+      "searchReportId": "",
+      "searchReportReason": "",
+      "userName": "hrtestzuzhi",
+      "thesisId": "437811030370975744"
+    }
+  ],
+  "thesisId": "467548181337702400",
+  "thesisKeyWords": [
+    {
+      "id": "437811030370975745",
+      "keywordId": "27",
+      "thesisId": "437811030370975744",
+      "keywordName": "2"
+    }
+  ],
+  "thesisReference": {
+    "id": "437811030370975747",
+    "thesisId": "437811030370975744",
+    "referenceNum": 20
+  },
+  "thesisReprints": [
+    {
+      "id": "437811030370975746",
+      "thesisId": "437811030370975744",
+      "journalId": "427034235870806017",
+      "journalName": null
+    }
+  ],
+  "thesisSignatureInstitutions": [
+    {
+      "institutionName": "四川大学",
+      "institutionRank": "1",
+      "thesisId": "437811030370975744"
+    }
+  ],
+  "timestamp": 1587300948000,
+  "title": "《中国组织工程研究》北大核心主任1医师论文发表",
+  "tokenKey": "759ed83875e74c0288260479b792257e3",
+  "volumeIssueNo": "2"
+}
+
+
+### 署名单位管理
+POST http://{{host}}:{{port}}/thesis/manage/institution
+Content-Type: application/json
+
+{
+  "fileId": "1337",
+  "head": {
+    "from": "string"
+  },
+  "timestamp": 1586532961000,
+  "tokenKey": "a139e38c87994e859d3cef1c8ba3f46f3",
+  "name": "四川"
+}
+
+###
+POST http://{{host}}:{{port}}/index/index
+Content-Type: application/json
+
+{
+  "head": {
+    "from": "string"
+  },
+  "timestamp": 1586532961000,
+  "tokenKey": "7f53d151468047d59163b17cf83a29a22",
+  "name": "测试",
+  "page": {
+    "pageSize": 30
+  }
+}
+
+###
+POST http://{{host}}:{{port}}/index/create
+Content-Type: application/json
+
+{
+  "head": {
+    "from": "string"
+  },
+  "timestamp": 1586532961000,
+  "tokenKey": "7f53d151468047d59163b17cf83a29a22",
+  "name": "测试"
+}
+
+### 创建论文
+POST http://{{host}}:{{port}}/index/import
+Content-Type: application/json
+
+{
+  "abstractInfo": "dd",
+  "endPageNo": 10,
+  "head": {
+    "from": "string"
+  },
+  "journalId": "423567149291012249",
+  "keyWords": [],
+  "publishedDate": "1582992000000",
+  "startPageNo": 2,
+  "submitDate": "1582646400000",
+  "thesisAttaches": [
+    {
+      "fileId": "431931993238831104",
+      "type": 1
+    },
+    {
+      "fileId": "432605478468616192",
+      "type": 2
+    }
+  ],
+  "thesisAuthorDTOS": [],
+  "thesisReference": {
+    "referenceNum": 10
+  },
+  "thesisReprints": [],
+  "thesisSignatureInstitutions": [
+    {
+      "institutionName": "成都有限公司",
+      "institutionRank": 10
+    }
+  ],
+  "thesisUsageDTO": {
+    "employeeId": "298312262123266048",
+    "gradingSchemeJournalId": 306
+  },
+  "timestamp": 1587114236000,
+  "title": "ceshissd",
+  "tokenKey": "38f723df920f4964b17da0cf90dd183b3",
+  "volumeIssueNo": "22"
+}
+
+###
+POST http://{{host}}:{{port}}/es/index/search
+Content-Type: application/json
+
+{
+  "head": {
+    "from": "string"
+  },
+  "timestamp": 1586532961000,
+  "tokenKey": "4ce549693e7d4f3aa0f467e33b0bccd76",
+  "name": "测试",
+  "page": {
+    "pageSize": 30
+  }
+}
+
+###

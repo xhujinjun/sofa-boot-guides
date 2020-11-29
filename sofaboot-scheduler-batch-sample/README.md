@@ -272,7 +272,7 @@ data={taskB.checkExecutedBefore=260faa9c-9783-4b56-b88f-c10bba7ced65, taskA.exec
 2019-04-19 17:31:39.006  INFO 45681 --- [-BIZ-12121-3-T4] c.alipay.sofa.batch.job.TaskListJobImpl  : Job sample job name requestId:1fd8d13a9bdb8acc11e96285eeeaabd4 COMPLETED
 ```
 
-You will notice the same job request id: 1fd8d13a9bdb8acc11e96285eeeaabd4, was 
+You will notice the same job apiRequest id: 1fd8d13a9bdb8acc11e96285eeeaabd4, was 
 1. initiated at the scheduler client,
 2. sent via RPC to SOFA boot batch server, 
 3. processed at the batch server and finally
